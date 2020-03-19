@@ -5,8 +5,14 @@ import ReactDOM from 'react-dom';
 
 const root = document.querySelector("#root");
 
-const Hello = () => {
-  return <div> Hello there! </div>;
+const Hello = (props) => {
+  return (
+    <div>
+      Hello
+      { props.name }
+      !
+    </div>
+  );
 };
 
-ReactDOM.render(<Hello />, root);
+ReactDOM.render(<Hello name="Mike" />, root);
